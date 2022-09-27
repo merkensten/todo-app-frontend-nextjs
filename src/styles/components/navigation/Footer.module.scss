@@ -1,0 +1,65 @@
+@import '../../variables.scss';
+
+.footer {
+  padding: 0 2rem;
+  padding-bottom: 15rem;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+
+    button {
+      margin: 0;
+      max-width: 60%;
+    }
+
+    button + button {
+      margin-top: 2rem;
+    }
+  }
+
+  .footer_border {
+    padding-bottom: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &_display {
+      border-top: 1px solid rgb(163, 163, 163);
+      margin: 0 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      &_display {
+        margin: 0;
+      }
+    }
+  }
+  .footer_wrapper {
+    padding-top: 4rem;
+    .footer_logo {
+      font-size: 4rem;
+      font-weight: 700;
+      color: $color-primary;
+      text-decoration: none;
+    }
+
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      nav {
+        flex-direction: row;
+        margin-top: 0;
+
+        button + button {
+          margin-top: 0;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+}

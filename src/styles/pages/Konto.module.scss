@@ -1,0 +1,39 @@
+.wrapper {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  form {
+    max-width: 700px;
+    margin: 5rem 0;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-size: 2rem;
+    }
+
+    label + label {
+      margin-top: 2rem;
+    }
+
+    input {
+      margin-top: 1rem;
+      color: #000;
+      font-size: 1.8rem;
+      padding: 1.4rem;
+    }
+
+    button {
+      font-size: 1.8rem;
+      margin-top: 0.4rem;
+      padding: 1.2rem;
+    }
+  }
+}

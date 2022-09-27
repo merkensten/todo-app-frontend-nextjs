@@ -1,0 +1,67 @@
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+
+  &_logo {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .mobileMenu {
+    .menuIcon {
+      width: 5rem;
+      height: 5rem;
+      cursor: pointer;
+    }
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .desktopMenu {
+    display: none;
+    @media (min-width: 1024px) {
+      display: flex;
+      align-items: center;
+      width: 75%;
+      justify-content: flex-end;
+
+      .menuList {
+        display: flex;
+        align-items: center;
+        margin-left: 4rem;
+        justify-content: space-between;
+
+        .menuItem {
+          font-size: 2rem;
+          font-weight: 500;
+          margin-left: 4rem;
+        }
+      }
+    }
+  }
+}
+
+// header modal item
+.list_item {
+  font-size: 3.2rem;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  border-bottom: 1px solid #000;
+}
+
+.list_item_btn {
+  font-size: 3.2rem;
+  padding: 2rem 0;
+  margin-top: 2rem;
+
+  button {
+    font-size: 2rem;
+  }
+}

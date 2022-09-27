@@ -1,0 +1,51 @@
+// header modal
+
+.header_modal_container {
+  background-color: #fdfdf1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateZ(1px);
+  -moz-transform: translateZ(1px);
+  -o-transform: translateZ(1px);
+  transform: translateZ(1px);
+  max-height: 150vh;
+  -webkit-overflow-scrolling: touch;
+
+  z-index: 1000;
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+.header_modal_wrapper {
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.header_modal_top_section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+  align-items: center;
+}
+
+.logo {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.closeIcon {
+  cursor: pointer;
+  width: 5rem;
+}

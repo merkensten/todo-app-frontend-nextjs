@@ -1,0 +1,1 @@
+# Client för en simpel todo applikation skapad med Next.JS
