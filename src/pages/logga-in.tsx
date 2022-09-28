@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { AuthContext } from '../context/AuthContext';
@@ -69,46 +70,53 @@ function Login() {
     }
   }
   return (
-    <div className={styles.login_wrapper}>
-      <form onSubmit={formSubmit}>
-        <h1>Logga in</h1>
-        <label>
-          Användarnamn
-          <input
-            type="text"
-            name="användarnamn"
-            id="användarnamn"
-            placeholder="användarnamn..."
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-          />
-        </label>
-        <label>
-          Lösenord
-          <input
-            type="password"
-            name="lösenord"
-            id="lösenord"
-            placeholder="lösenord..."
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
-        </label>
-        <button className="btn-primary form-btn" type="submit">
-          {formSucess ? 'Laddar...' : 'Logga in'}
-        </button>
-        {formError && (
-          <div>
-            <p className="error">{formErrorMessage}</p>
-          </div>
-        )}
-        {formSucess && (
-          <div>
-            <p>Inloggning lyckades! Du kommer snart navigeras till appen.</p>
-          </div>
-        )}
-      </form>
-    </div>
+    <>
+      <Head>
+        <title>Logga in</title>
+        <meta name="description" content="Logga in" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className={styles.login_wrapper}>
+        <form onSubmit={formSubmit}>
+          <h1>Logga in</h1>
+          <label>
+            Användarnamn
+            <input
+              type="text"
+              name="användarnamn"
+              id="användarnamn"
+              placeholder="användarnamn..."
+              value={username}
+              onChange={(event) => setUsername(event.target.value)}
+            />
+          </label>
+          <label>
+            Lösenord
+            <input
+              type="password"
+              name="lösenord"
+              id="lösenord"
+              placeholder="lösenord..."
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+            />
+          </label>
+          <button className="btn-primary form-btn" type="submit">
+            {formSucess ? 'Laddar...' : 'Logga in'}
+          </button>
+          {formError && (
+            <div>
+              <p className="error">{formErrorMessage}</p>
+            </div>
+          )}
+          {formSucess && (
+            <div>
+              <p>Inloggning lyckades! Du kommer snart navigeras till appen.</p>
+            </div>
+          )}
+        </form>
+      </div>
+    </>
   );
 }
 

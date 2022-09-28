@@ -31,10 +31,10 @@ const Home: NextPage = () => {
           <h1 className={styles.title}>NextJS todo app</h1>
 
           <div>
-            <Link href="/login">
+            <Link href="/logga-in">
               <button className="btn-secondary">Logga in</button>
             </Link>
-            <Link href="/signup">
+            <Link href="/registrera">
               <button className="btn-primary">Registrera</button>
             </Link>
           </div>
