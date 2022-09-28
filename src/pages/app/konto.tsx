@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
@@ -81,37 +82,48 @@ function Konto() {
   }
 
   return (
-    <div className={styles.wrapper}>
-      <h1>Hantera Konto</h1>
-      <p>Användarnamn: {username}</p>
-      <form onSubmit={onUpdateUsername}>
-        <h2>Uppdatera användarnamn</h2>
-        <label>
-          Nytt användarnamn:
-          <input
-            type="text"
-            name="användarnamn"
-            id="användarnamn"
-            placeholder="Nytt användarnamn..."
-            onChange={(e) => setUpdatedUsername(e.target.value)}
-            value={updatedUsername}
-          />
-          <input
-            type="text"
-            name="confirm-användarnamn"
-            id="confirm-användarnamn"
-            placeholder="Konfirmera användarnamn..."
-            onChange={(e) => setConfirmedUsername(e.target.value)}
-            value={confirmUsername}
-          />
-        </label>
-        <button className="form-btn btn-primary" type="submit">
-          Uppdatera
-        </button>
-        {formError && <p className="error">{errorMessage}</p>}
-        {formScuccess && <p className="success">Användarnamn uppdaterat, du kommer snart att loggas ut!</p>}
-      </form>
-    </div>
+    <>
+      <Head>
+        <title>Hantera Konto</title>
+        <meta name="description" content="Hantera konto" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className={styles.wrapper}>
+        <h1>Hantera Konto</h1>
+        <p>Användarnamn: {username}</p>
+        <form onSubmit={onUpdateUsername}>
+          <h2>Uppdatera användarnamn</h2>
+          <label>
+            Nytt användarnamn:
+            <input
+              type="text"
+              name="användarnamn"
+              id="användarnamn"
+              placeholder="Nytt användarnamn..."
+              onChange={(e) => setUpdatedUsername(e.target.value)}
+              value={updatedUsername}
+            />
+            <input
+              type="text"
+              name="confirm-användarnamn"
+              id="confirm-användarnamn"
+              placeholder="Konfirmera användarnamn..."
+              onChange={(e) => setConfirmedUsername(e.target.value)}
+              value={confirmUsername}
+            />
+          </label>
+          <button className="form-btn btn-primary" type="submit">
+            Uppdatera
+          </button>
+          {formError && <p className="error">{errorMessage}</p>}
+          {formScuccess && (
+            <p className="success">
+              Användarnamn uppdaterat, du kommer snart att loggas ut!
+            </p>
+          )}
+        </form>
+      </div>
+    </>
   );
 }
 

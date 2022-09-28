@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { AuthContext } from '../../context/AuthContext';
 import styles from '../../styles/pages/App.module.scss';
@@ -35,10 +36,17 @@ function App() {
   }, [router, getToken, isUserAuthenticated]);
 
   return (
-    <div className={styles.wrapper}>
-      <h1>Hej {username}!</h1>
-      <Todos userId={userId} token={userToken} />
-    </div>
+    <>
+      <Head>
+        <title>Todo App</title>
+        <meta name="description" content="Todo Next.js Nest JS app sida" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className={styles.wrapper}>
+        <h1>Hej {username}!</h1>
+        <Todos userId={userId} token={userToken} />
+      </div>
+    </>
   );
 }
 
