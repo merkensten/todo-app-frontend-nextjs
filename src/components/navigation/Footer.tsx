@@ -16,10 +16,10 @@ function GuestFooter() {
           <a className={styles.footer_logo}>Todo Next Nest App</a>
         </Link>
         <nav>
-          <Link href="/login">
+          <Link href="/logga-in">
             <button className="btn-secondary">Logga in</button>
           </Link>
-          <Link href="/signup">
+          <Link href="/registrera">
             <button className="btn-primary">Registrera</button>
           </Link>
         </nav>

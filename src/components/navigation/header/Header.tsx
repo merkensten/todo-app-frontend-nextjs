@@ -27,12 +27,12 @@ function GuestHeader() {
   const HeaderItems = [
     {
       name: 'Logga in',
-      link: '/login',
+      link: '/logga-in',
       type: 'link',
     },
     {
       name: 'Registrera',
-      link: '/signup',
+      link: '/registrera',
       type: 'link',
     },
   ];
@@ -47,10 +47,10 @@ function GuestHeader() {
             <Bars2Icon onClick={handleOpenModal} className={styles.menuIcon} />
           </div>
           <nav className={styles.desktopMenu}>
-            <Link href="/login">
+            <Link href="/logga-in">
               <button className="btn-secondary">Logga in</button>
             </Link>
-            <Link href="/signup">
+            <Link href="/registrera">
               <button className="btn-primary">Registrera</button>
             </Link>
           </nav>
@@ -87,7 +87,7 @@ function AppHeader() {
 
   function logoutUserFunc() {
     logoutUser();
-    router.push('/login');
+    router.push('/logga-in');
   }
 
   const handleOpenModal = () => {
