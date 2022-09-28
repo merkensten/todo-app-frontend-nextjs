@@ -49,7 +49,7 @@ function Registrera() {
         setFormSucess(true);
         clearFormFields();
         setTimeout(() => {
-          router.push('/login');
+          router.push('/logga-in');
         }, 2000);
       })
       .catch(function (error) {
