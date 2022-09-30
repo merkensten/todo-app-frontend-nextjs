@@ -27,7 +27,7 @@ function Konto() {
   React.useEffect(() => {
     // checks if the user is authenticated
     if (isUserAuthenticated === false) {
-      router.push('/login');
+      router.push('/logga-in');
     }
 
     // Denna logik wrappas i en if sats för att säkerställa att det finns en token för annars uppstår ett error om getTokenInfo inte kommer åt en token.

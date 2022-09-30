@@ -21,7 +21,7 @@ function App() {
   React.useEffect(() => {
     // checks if the user is authenticated
     if (isUserAuthenticated === false) {
-      router.push('/login');
+      router.push('/logga-in');
     }
 
     // Denna if sats körs bara när det finns en autensierad användare
